@@ -1,5 +1,3 @@
-const {expect} = require("@playwright/test");
-
 class FormAuthenticationPage {
 
     constructor(page) {
@@ -21,14 +19,14 @@ class FormAuthenticationPage {
         await this.submitButton.click();
     }
 
-    async assertLoginSuccess() {
-        await expect(this.successMessage).toContainText('You logged into a secure area!');
+    async getSuccessMessage() {
+        return await this.successMessage.textContent();
     }
 
-    async assertLoginFailure() {
-        await expect(this.errorMessage).toContainText('Your username is invalid!');
+    async getErrorMessage() {
+        return await this.errorMessage.textContent();
     }
 
 }
 
-module.exports = { FormAuthenticationPage };
+module.exports = {FormAuthenticationPage};

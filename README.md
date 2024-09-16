@@ -1,21 +1,21 @@
 # Harver-QA-Web-Automation-Assessment
 
-This project contains automated tests for https://the-internet.herokuapp.com/ using JavaScript with Playwright (Page Object Model).
+This project contains automated tests for https://the-internet.herokuapp.com/ using JavaScript with Playwright (Page
+Object Model).
 
 Project Structure
 
-1. pages/: Contains Page Object classes.
-2. tests/: Contains test scripts.
-3. playwright.config.js: Playwright configuration file.
+1. pages/: Contains Page Object classes
+2. tests/: Contains test scripts
+3. playwright.config.js: Playwright configuration file
 
 Test Scenarios Include:
 
-1. Checkboxes 
-2. Dropdown 
-3. Form Authentication 
-4. Hovers 
+1. Checkboxes
+2. Dropdown
+3. Form Authentication
+4. Hovers
 5. Notification Messages
-
 
 ## Prerequisites:
 
@@ -33,11 +33,11 @@ Test Scenarios Include:
 4. To run the tests:
    ```bash
    npx playwright test
-   
+
 5. To run individual test script by specifying the script name:
    ```bash
    npx playwright test checkbox.spec.js 
-   
+
 6. To run tests in a specific browser, use:
    ```bash
      npx playwright test --project=chromium

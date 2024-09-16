@@ -1,5 +1,3 @@
-const {expect} = require("@playwright/test");
-
 class DropdownPage {
 
     constructor(page) {
@@ -19,13 +17,6 @@ class DropdownPage {
         return await this.dropdown.locator('option:checked').textContent();
     }
 
-    async assertSelectedOption(value, expectedText) {
-        const selectedOptionValue = await this.dropdown.inputValue();
-        expect(selectedOptionValue).toBe(value);
-        const selectedOptionText = await this.getSelectedOptionText();
-        expect(selectedOptionText).toBe(expectedText);
-    }
-
 }
 
-module.exports = { DropdownPage };
+module.exports = {DropdownPage};

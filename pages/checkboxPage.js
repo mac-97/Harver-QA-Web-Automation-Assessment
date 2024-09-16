@@ -1,5 +1,3 @@
-const {expect} = require("@playwright/test");
-
 class CheckboxesPage {
 
     constructor(page) {
@@ -13,23 +11,22 @@ class CheckboxesPage {
         await this.page.goto('/checkboxes');
     }
 
-    async toggleCheckbox1() {
-        await this.checkbox1.check();
+    async selectCheckbox1() {
+        await this.checkbox1.click();
     }
 
-    async toggleCheckbox2() {
-        await this.checkbox2.uncheck();
+    async selectCheckbox2() {
+        await this.checkbox2.click();
     }
 
-    // Assert initial states
-    async assertCheckbox1IsChecked() {
-        await expect(this.checkbox1).toBeChecked();
+    async isCheckbox1Checked() {
+        return await this.checkbox1.isChecked();
     }
 
-    async assertCheckbox2IsUnchecked() {
-        await expect(this.checkbox2).not.toBeChecked();
+    async isCheckbox2Checked() {
+        return await this.checkbox2.isChecked();
     }
 
 }
 
-module.exports = { CheckboxesPage };
+module.exports = {CheckboxesPage};

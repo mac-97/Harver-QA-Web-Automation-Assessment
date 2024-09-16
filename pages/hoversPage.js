@@ -1,5 +1,3 @@
-const {expect} = require("@playwright/test");
-
 class HoversPage {
 
     constructor(page) {
@@ -16,10 +14,10 @@ class HoversPage {
         await this.avatar.hover();
     }
 
-    async assertUserInfoText(expectedText) {
-        await expect(this.userInfo).toContainText(expectedText);
+    async getUserInfoText() {
+        return await this.userInfo.textContent();
     }
 
 }
 
-module.exports = { HoversPage };
+module.exports = {HoversPage};

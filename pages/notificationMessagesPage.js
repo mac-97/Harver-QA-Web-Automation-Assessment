@@ -1,5 +1,3 @@
-const {expect} = require("@playwright/test");
-
 class NotificationMessagesPage {
 
     constructor(page) {
@@ -16,10 +14,10 @@ class NotificationMessagesPage {
         await this.notificationLink.click();
     }
 
-    async assertNotificationIsVisible() {
-        await expect(this.notificationMessage).toBeVisible();
+    async getNotificationMessage() {
+        return await this.notificationMessage.textContent();
     }
 
 }
 
-module.exports = { NotificationMessagesPage };
+module.exports = {NotificationMessagesPage};
