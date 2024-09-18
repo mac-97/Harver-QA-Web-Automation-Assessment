@@ -23,7 +23,7 @@ module.exports = defineConfig({
         baseURL: 'https://the-internet.herokuapp.com',
 
         /* Set this to true if you don't want to see the browser opening */
-        headless: false,
+        headless: true,
 
         /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
         trace: 'on-first-retry',

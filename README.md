@@ -30,15 +30,19 @@ Test Scenarios Include:
    ```bash
    npm install
 
-4. To run the tests:
+4. To run the tests: (By default, all tests will run in headless mode)
    ```bash
    npx playwright test
 
-5. To run individual test script by specifying the script name:
+5. To run tests in headed mode:
+   ```bash
+   npx playwright test --headed
+
+6. To run individual test script by specifying the script name:
    ```bash
    npx playwright test checkbox.spec.js 
 
-6. To run tests in a specific browser, use:
+7. To run tests in a specific browser, use:
    ```bash
      npx playwright test --project=chromium
      npx playwright test --project=firefox
